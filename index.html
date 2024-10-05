@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiQuest: 150-Digit Challenge</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <div class="container" id="home-screen">
+        <h1>PiQuest: 150-Digit Challenge</h1>
+        <p>Select Difficulty:</p>
+        <button class="difficulty" onclick="startGame(20, 30)">Level 1 (20 Digits)</button>
+        <button class="difficulty" onclick="startGame(60, 60)">Level 2 (60 Digits)</button>
+        <button class="difficulty" onclick="startGame(100, 120)">Level 3 (100 Digits)</button>
+        <button class="difficulty" onclick="startGame(150, 180)">Level 4 (150 Digits)</button>
+        <div>Points: <span id="points">0</span></div>
+    </div>
+
+    <div class="container" id="game-screen" style="display: none;">
+        <div class="status-bar">
+            <div>Points: <span id="points-game">0</span></div>
+            <div>Timer: <span id="timer">0</span>s</div>
+        </div>
+        <h1>Memorize PI</h1>
+        <div id="pi-digits">3.</div>
+        <input type="text" id="digit-input" placeholder="Enter the next digit of PI" maxlength="1">
+        <div id="result"></div>
+        <button class="home-btn" onclick="returnHome()">Return to Home</button>
+    </div>
+
+    <audio id="pop-sound" src="pop.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
