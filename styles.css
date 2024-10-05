@@ -78,6 +78,11 @@ h1 {
     width: 100%;
     max-width: 350px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Prevent overflow of digits and align text */
+    white-space: nowrap;      /* Prevents text from wrapping */
+    overflow: hidden;         /* Ensures old digits disappear */
+    text-align: right;        /* Align digits to the right */
 }
 
 input[type="text"] {
